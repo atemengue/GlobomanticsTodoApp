@@ -3,11 +3,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows;
+using Globomantics.Domain;
 
 namespace Globomantics.Windows;
 
 public partial class App : Application
 {
+    public static User CurrentUser { get; set; } = default!;
     public IServiceProvider ServiceProvider { get; init; } 
     public IConfiguration Configuration { get; init; }
 
